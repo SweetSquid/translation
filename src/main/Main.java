@@ -27,9 +27,9 @@ public class Main {
                     try {
                         rawData = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor); //get data raw data from clipboard
                         System.out.println("What was in clipboard:  " + rawData);
-                        String kek = Copy.getCopy(); //get copied data
-                        System.out.println("What was copied:  " + kek);
-                        Notification.runNotification(kek); //start notification
+                        String newData = Copy.getCopy(); //get copied data
+                        System.out.println("What was copied:  " + newData);
+                        Notification.runNotification(newData); //start notification
                         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(rawData), null); //returning raw data
                         System.out.println("What came into clipboard: " + Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor));
                     } catch (Exception e) {
